@@ -1,0 +1,72 @@
+下記ディレクトリ構成で静的サイトを作成しています。
+
+C:.
+│  index.html
+│  prompt.txt
+│  
+├─css
+│      style.css
+│      
+├─images
+│      enen2.jpg
+│      god-eater.jpg
+│      hokuto-tensei2.jpg
+│      kaguya.jpg
+│      kokakukidotai.jpg
+│      onimusya.jpg
+│      tokyo-ghoul.jpg
+│      tokyo-revengers.jpg
+│      valvrave2.jpg
+│
+├─js
+│      auth-check.js
+│      auth.js
+│      calc.js
+│      modal.js
+│
+└─machines
+    ├─enen2
+    │      index.html
+    │
+    ├─god-eater
+    │      eater_1.png
+    │      eater_2.png
+    │      index.html
+    │
+    ├─hokuto-tensei2
+    │      hokuto-tensei-settings_1.jpg
+    │      hokuto-tensei-settings_2.jpg
+    │      hokuto-tensei-settings_3.jpg
+    │      index.html
+    │
+    ├─kaguya
+    │      index.html
+    │
+    ├─kokakukidotai
+    │      index.html
+    │
+    ├─onimusya
+    │      index.html
+    │      onimusha_1.jpg
+    │
+    ├─tokyo-ghoul
+    │      ghoul_1.jpg
+    │      ghoul_2.jpg
+    │      ghoul_3.jpg
+    │      index.html
+    │
+    ├─tokyo-revengers
+    │      index.html
+    │      Revengers_1.jpg
+    │      Revengers_2.jpg
+    │      Revengers_3.jpg
+    │      Revengers_4.jpg
+    │      Revengers_5.jpg
+    │      Revengers_6.jpg
+    │      Revengers_7.jpg
+    │
+    └─valvrave2
+            index.html
+            vvv2_1.jpg
+            vvv2_2.png
+            vvv2_3.jpg

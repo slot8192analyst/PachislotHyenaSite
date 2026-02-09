@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京喰種 設定変更後打ち分けチャート</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="machine-header">
+            <p class="back-link"><a href="../../index.html">← 機種選択に戻る</a></p>
+            <div class="machine-header-image">
+                <img src="../../images/tokyo-ghoul.jpg" alt="東京喰種">
+            </div>
+            <h1 class = "machine-header-title">東京喰種朝イチ打ち分け</h1>
+        </header>
+
+        <main>
+            <!-- リセット打ち分け最適チャート -->
+            <section class="info-card">
+                <h2>設定変更後打ち分けチャート</h2>
+                <div class="info-content">
+                    <div class="fc-tree">
+
+                        <!-- root -->
+                        <div class="fc-node">
+                            <div class="fc-box fc-box--start">リセット0G〜CZ当選まで打つ</div>
+                        </div>
+
+                        <ul class="fc-branch">
+                            <!-- AT当選ルート -->
+                            <li class="fc-item">
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--hit">AT当選</div>
+                                </div>
+                                <ul class="fc-branch">
+                                    <li class="fc-item">
+                                        <div class="fc-label">AT単発</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--caution">引き戻しを15Gまで見て辞め</div>
+                                        </div>
+                                    </li>
+                                    <li class="fc-item">
+                                        <div class="fc-label">AT単発以外</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--stop">AT後即ヤメ</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- CZスルールート -->
+                            <li class="fc-item">
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--default">CZスルー</div>
+                                    <span class="fc-note">リセCZ1スルーの状態</span>
+                                </div>
+
+                                <div class="fc-connector"></div>
+
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--action">1G目 アイキャッチ確認</div>
+                                </div>
+
+                                <ul class="fc-branch">
+                                    <!-- 霧嶋董香 以外 -->
+                                    <li class="fc-item">
+                                        <div class="fc-label">「霧嶋董香」以外</div>
+                                        <div class="fc-node" id="fc-loop-target">
+                                            <div class="fc-box fc-box--go">100Gゾーンまで続行</div>
+                                        </div>
+                                        <ul class="fc-branch">
+                                            <li class="fc-item">
+                                                <div class="fc-node" id="fc-loop-from">
+                                                    <div class="fc-box fc-box--default">CZスルー</div>
+                                                </div>
+                                            </li>
+                                            <li class="fc-item">
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--default">CZ非当選</div>
+                                                </div>
+                                                <ul class="fc-branch">
+                                                    <li class="fc-item">
+                                                        <div class="fc-label">道中等に示唆無し</div>
+                                                        <div class="fc-node">
+                                                            <div class="fc-box fc-box--stop">ヤメ</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="fc-item">
+                                                        <div class="fc-label">道中50ゲーム前兆あり</div>
+                                                        <div class="fc-node">
+                                                            <div class="fc-box fc-box--go">基本AT当選まで</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!-- 霧嶋董香 -->
+                                    <li class="fc-item">
+                                        <div class="fc-label">「霧嶋董香」</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--stop">ヤメ</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- 補足 -->
+                        <div class="fc-supplement">
+                            <div class="fc-supplement-title">補足</div>
+                            <div class="fc-supplement-item fc-supplement-item--info">
+                                <p>1スルーで打たない方がいいのは<strong>「霧嶋董香」アイキャッチ後のみ</strong></p>
+                            </div>
+                            <div class="fc-supplement-item fc-supplement-item--warn">
+                                <p>※ただし朝一当選が200Gまで連れていかれたものよりも100Gで引っかかった後のが甘いので島の中からそちらを優先すること</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="references">
+                <h3>参考文献</h3>
+                <ul>
+                    <li><a href="https://note.com/ruko7613/n/na6a453efe232" target="_blank" rel="noopener">note - 東京喰種リセット打ちの最適化チャート (ruko)</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 PachislotSettingChecker</p>
+        </footer>
+    </div>
+
+    <!-- 画像モーダル -->
+    <div class="image-modal" id="imageModal">
+        <span class="modal-close" id="modalClose">×</span>
+        <img src="" alt="拡大画像" id="modalImage">
+        <p class="modal-hint">タップで閉じる</p>
+    </div>
+
+    <script src="../../js/auth-check.js"></script>
+    <script src="../../js/modal.js"></script>
+
+    <script>
+    (function() {
+        /* ==========================================
+           1. fc-branch の縦線を最後のアイテムの
+              横枝位置ぴったりで止める
+           ========================================== */
+        function fixBranchLines() {
+            document.querySelectorAll('.fc-branch').forEach(function(branch) {
+                var items = branch.querySelectorAll(':scope > .fc-item');
+                if (items.length === 0) return;
+
+                var lastItem = items[items.length - 1];
+                var branchRect = branch.getBoundingClientRect();
+                var lastRect  = lastItem.getBoundingClientRect();
+
+                // 横枝線の top は lastItem の top + 22px（CSS の .fc-item::before { top:22px }）
+                var lineBottom = (lastRect.top - branchRect.top) + 22;
+
+                // ::before の高さを CSS カスタムプロパティで渡す
+                branch.style.setProperty('--fc-line-h', lineBottom + 'px');
+            });
+        }
+
+        /* ::before の height にカスタムプロパティを適用する
+           スタイルを動的に1回だけ挿入 */
+        var style = document.createElement('style');
+        style.textContent = '.fc-branch::before { height: var(--fc-line-h, 100%); }';
+        document.head.appendChild(style);
+
+        /* ==========================================
+           2. ループ矢印 SVG（元のロジックそのまま）
+           ========================================== */
+        var MARGIN = 12;
+
+        function drawLoop() {
+            var old = document.querySelector('.fc-loop-svg');
+            if (old) old.remove();
+
+            var fromNode = document.getElementById('fc-loop-from');
+            var toNode   = document.getElementById('fc-loop-target');
+            var tree     = document.querySelector('.fc-tree');
+            if (!fromNode || !toNode || !tree) return;
+
+            var fromBox = fromNode.querySelector('.fc-box');
+            var toBox   = toNode.querySelector('.fc-box');
+            if (!fromBox || !toBox) return;
+
+            var treeRect = tree.getBoundingClientRect();
+            var fromRect = fromBox.getBoundingClientRect();
+            var toRect   = toBox.getBoundingClientRect();
+
+            var fromRightX = fromRect.right - treeRect.left;
+            var fromMidY   = fromRect.top + fromRect.height / 2 - treeRect.top;
+            var toRightX   = toRect.right - treeRect.left;
+            var toMidY     = toRect.top + toRect.height / 2 - treeRect.top;
+
+            var bendX = Math.max(fromRightX, toRightX) + MARGIN;
+
+            var ns  = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('class', 'fc-loop-svg');
+            svg.style.width  = (bendX + 20) + 'px';
+            svg.style.height = tree.scrollHeight + 'px';
+
+            var r = 6;
+            var d = 'M ' + fromRightX + ' ' + fromMidY
+                  + ' L ' + (bendX - r) + ' ' + fromMidY
+                  + ' Q ' + bendX + ' ' + fromMidY + ' ' + bendX + ' ' + (fromMidY - r)
+                  + ' L ' + bendX + ' ' + (toMidY + r)
+                  + ' Q ' + bendX + ' ' + toMidY + ' ' + (bendX - r) + ' ' + toMidY
+                  + ' L ' + toRightX + ' ' + toMidY;
+
+            var path = document.createElementNS(ns, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', '#4ecdc4');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('stroke-dasharray', '6 3');
+            svg.appendChild(path);
+
+            tree.appendChild(svg);
+        }
+
+        /* ==========================================
+           3. 初期化 & リサイズ
+           ========================================== */
+        function refresh() {
+            fixBranchLines();
+            drawLoop();
+        }
+
+        window.addEventListener('load', refresh);
+        window.addEventListener('resize', refresh);
+    })();
+    </script>
+
+
+</body>
+</html>
