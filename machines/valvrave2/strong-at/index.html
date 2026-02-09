@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>革命機ヴァルヴレイヴ2 優遇狙いチャート</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="machine-header">
+            <p class="back-link"><a href="../../../index.html">← 機種選択に戻る</a></p>
+            <div class="machine-header-image">
+                <img src="../../../images/valvrave2.jpg" alt="革命機ヴァルヴレイヴ2">
+            </div>
+            <h1 class="machine-header-title">革命機ヴァルヴレイヴ2</h1>
+        </header>
+
+        <main>
+            <!-- 参考文献 -->
+            <section class="references">
+                <h3>参考文献 理由についてはこれにすべてが書いてある</h3>
+                <ul>
+                    <li><a href="https://note.com/ruko7613/n/n1875d25d8f44" target="_blank" rel="noopener">note - ヴヴヴ２を打ちに行く前に意識しておくこと (ruko)</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 PachislotSettingChecker</p>
+        </footer>
+    </div>
+
+    <!-- 画像モーダル -->
+    <div class="image-modal" id="imageModal">
+        <span class="modal-close" id="modalClose">×</span>
+        <img src="" alt="拡大画像" id="modalImage">
+        <p class="modal-hint">タップで閉じる</p>
+    </div>
+
+    <script src="../../js/auth-check.js"></script>
+    <script src="../../js/modal.js"></script>
+
+    <script>
+    (function() {
+        /* ==========================================
+           1. fc-branch の縦線を最後のアイテムの
+              横枝位置ぴったりで止める
+           ========================================== */
+        function fixBranchLines() {
+            document.querySelectorAll('.fc-branch').forEach(function(branch) {
+                var items = branch.querySelectorAll(':scope > .fc-item');
+                if (items.length === 0) return;
+
+                var lastItem = items[items.length - 1];
+                var branchRect = branch.getBoundingClientRect();
+                var lastRect  = lastItem.getBoundingClientRect();
+
+                var lineBottom = (lastRect.top - branchRect.top) + 22;
+                branch.style.setProperty('--fc-line-h', lineBottom + 'px');
+            });
+        }
+
+        var style = document.createElement('style');
+        style.textContent = '.fc-branch::before { height: var(--fc-line-h, 100%); }';
+        document.head.appendChild(style);
+
+        /* ==========================================
+           2. SVG接続線を描画
+              「▲上のもう1周続行と同じ」→「もう1周続行」
+           ========================================== */
+        var MARGIN = 14;
+
+        function drawConnections() {
+            var old = document.querySelector('.fc-loop-svg');
+            if (old) old.remove();
+
+            var fromNode = document.getElementById('fc-loop-target-direct');
+            var toNode   = document.getElementById('fc-loop-target');
+            var tree     = document.querySelector('.fc-tree');
+            if (!fromNode || !toNode || !tree) return;
+
+            var fromBox = fromNode.querySelector('.fc-box');
+            var toBox   = toNode.querySelector('.fc-box');
+            if (!fromBox || !toBox) return;
+
+            var treeRect = tree.getBoundingClientRect();
+            var fromRect = fromBox.getBoundingClientRect();
+            var toRect   = toBox.getBoundingClientRect();
+
+            // from: ボックスの右端中央
+            var fromRightX = fromRect.right - treeRect.left;
+            var fromMidY   = fromRect.top + fromRect.height / 2 - treeRect.top;
+
+            // to: ボックスの右端中央
+            var toRightX = toRect.right - treeRect.left;
+            var toMidY   = toRect.top + toRect.height / 2 - treeRect.top;
+
+            var bendX = Math.max(fromRightX, toRightX) + MARGIN;
+
+            var ns  = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('class', 'fc-loop-svg');
+            svg.style.width  = (bendX + 20) + 'px';
+            svg.style.height = tree.scrollHeight + 'px';
+
+            // 矢印マーカー定義
+            var defs = document.createElementNS(ns, 'defs');
+            var marker = document.createElementNS(ns, 'marker');
+            marker.setAttribute('id', 'arrowhead');
+            marker.setAttribute('markerWidth', '8');
+            marker.setAttribute('markerHeight', '6');
+            marker.setAttribute('refX', '8');
+            marker.setAttribute('refY', '3');
+            marker.setAttribute('orient', 'auto');
+            var arrow = document.createElementNS(ns, 'polygon');
+            arrow.setAttribute('points', '0 0, 8 3, 0 6');
+            arrow.setAttribute('fill', '#4ecdc4');
+            marker.appendChild(arrow);
+            defs.appendChild(marker);
+            svg.appendChild(defs);
+
+            var r = 6;
+
+            // from右端 → 右に出る → 上に曲がる → to右端に入る
+            var d = 'M ' + fromRightX + ' ' + fromMidY
+                  + ' L ' + (bendX - r) + ' ' + fromMidY
+                  + ' Q ' + bendX + ' ' + fromMidY + ' ' + bendX + ' ' + (fromMidY - r)
+                  + ' L ' + bendX + ' ' + (toMidY + r)
+                  + ' Q ' + bendX + ' ' + toMidY + ' ' + (bendX - r) + ' ' + toMidY
+                  + ' L ' + (toRightX) + ' ' + toMidY;
+
+            var path = document.createElementNS(ns, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', '#4ecdc4');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('stroke-dasharray', '6 3');
+            path.setAttribute('marker-end', 'url(#arrowhead)');
+            svg.appendChild(path);
+
+            tree.appendChild(svg);
+        }
+
+        /* ==========================================
+           3. 初期化 & リサイズ
+           ========================================== */
+        function refresh() {
+            fixBranchLines();
+            drawConnections();
+        }
+
+        window.addEventListener('load', refresh);
+        window.addEventListener('resize', refresh);
+    })();
+    </script>
+
+    <script>
+    /* トグル開閉 */
+    document.querySelectorAll('.toggle-header').forEach(function(header) {
+        header.addEventListener('click', function() {
+            var item = this.closest('.toggle-item');
+            item.classList.toggle('open');
+        });
+    });
+    </script>
+
+</body>
+</html>
