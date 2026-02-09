@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>革命機ヴァルヴレイヴ2 優遇狙いチャート</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="machine-header">
+            <p class="back-link"><a href="../../../index.html">← 機種選択に戻る</a></p>
+            <div class="machine-header-image">
+                <img src="../../../images/valvrave2.jpg" alt="革命機ヴァルヴレイヴ2">
+            </div>
+            <h1 class="machine-header-title">革命機ヴァルヴレイヴ2</h1>
+        </header>
+
+        <main>
+            <section class="info-card">
+                <h2>優遇狙いチャート</h2>
+                <div class="info-content">
+                    <div class="fc-tree">
+
+                        <!-- root -->
+                        <div class="fc-node">
+                            <div class="fc-box fc-box--start">AT5～9連後CZ0スルーの 100〜130G<br>2周期目100pt未達 から打ち始め</div>
+                        </div>
+
+                        <ul class="fc-branch">
+
+                            <!-- ルート1: 100移行せず 140pt以下 -->
+                            <li class="fc-item">
+                                <div class="fc-label">100移行せず・140pt以下</div>
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--stop">ヤメ</div>
+                                </div>
+                            </li>
+
+                            <!-- ルート2: 100移行せず 150pt以上 -->
+                            <li class="fc-item">
+                                <div class="fc-label">100移行せず・150pt以上</div>
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--go">200pt前兆まで見る</div>
+                                </div>
+                                <ul class="fc-branch">
+                                    <!-- 200pt抜けを先（上）に -->
+                                    <li class="fc-item">
+                                        <div class="fc-label">200pt抜け</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--stop">ヤメ</div>
+                                        </div>
+                                    </li>
+                                    <!-- CZ当選を後（下）に -->
+                                    <li class="fc-item">
+                                        <div class="fc-label">CZ当選</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--hit">CZ当選</div>
+                                        </div>
+                                        <ul class="fc-branch">
+                                            <!-- スルー -->
+                                            <li class="fc-item">
+                                                <div class="fc-label">スルー</div>
+                                                <div class="fc-node" id="fc-loop-target">
+                                                    <div class="fc-box fc-box--caution">もう1周続行</div>
+                                                </div>
+                                                <div class="fc-connector"></div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--default">200pt抜け</div>
+                                                </div>
+                                                <div class="fc-connector"></div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--stop">ヤメ</div>
+                                                </div>
+                                            </li>
+                                            <!-- 突破→ボーナス -->
+                                            <li class="fc-item">
+                                                <div class="fc-label">突破 → ボーナス後</div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--stop">即ヤメ</div>
+                                                </div>
+                                            </li>
+                                            <!-- 突破→AT -->
+                                            <li class="fc-item">
+                                                <div class="fc-label">突破 → AT後</div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--caution">引き戻し見て、示唆による押し引き
+                                                        <br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;"><strong>弱革命後のモニター示唆：</strong>Valvrave3(黄),PFネーム火遊(紫) → 2周期100ptの優遇移行チェックまで
+                                                        <br><strong>弱革命後のモニター示唆：</strong>火人(赤),搭乗者野火マリエ(赤) → 続行
+                                                        <br><strong>下位ATor強超革命後のモニター示唆：</strong>火人(赤),搭乗者野火マリエ(赤) → 続行
+                                                        <br><strong>電脳ゾーン後ボイス：</strong>「ナーイス」かつ弱超革命後 → 2周期100ptの優遇移行チェックまで
+                                                        <br><strong>電脳ゾーン後ボイス：</strong>「自分で自分がわからない」 → CZまで不問</span></div>
+                                                </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- ルート3: 直接100or200でCZ当選→スルー -->
+                            <li class="fc-item">
+                                <div class="fc-label">100 or 200でCZ当選 → スルー</div>
+                                <div class="fc-node" id="fc-loop-target-direct">
+                                    <div class="fc-box fc-box--action">▲ 上の「もう1周続行」と同じ</div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 解説コラム -->
+            <section class="toggle-section">
+                <h2 class="toggle-section-title">解説コラム</h2>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">優遇区間の特徴</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>1周期ではCZにほとんど当選しない</p>
+                            <p>2周期以降の100pt選択率が約60%に跳ね上がる</p>
+                            <p>2周期以降のポイント天井が200ptになる</p>
+                            <p>約9割で3周期までにCZに当選する</p>
+                            <p>革命ボーナスの選択率が通常より高く約65%程に感じられる</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">区間移行の考え方</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>優遇区間は<strong>ボーナスを引くまでは</strong>継続し続ける</p>
+                            <p>優遇区間は<strong>決戦ボーナス(RB)後</strong>に確実に転落する</p>
+                            <p>優遇区間は<strong>強超革命(10連以上)後</strong>に確実に転落する</p>
+                            <p>優遇区間は<strong>下位ATもしくはBB単発後に確率で</strong>転落する</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">前兆抜け判断</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>100pt踏んでからの流れ</p>
+                            <p>1,2G目：羽演出</p>
+                            <p>3～14G目：ピノの発展煽り</p>
+                            <p><strong>基本的には規定pt到達後14G後に前兆「革命の高校生ステージ」へ移行</strong></p>
+                            <p>基本的にとした理由</p>
+                            <p>12G発展はCZ当選のチャンスだったり、ステチェン発生やモニター演出発生で周期到達否定があるから</p>
+                            <p><strong>1回目の羽根演出から14G数えて前兆移行しなければやめでよい</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="references">
+                <h3>参考文献</h3>
+                <ul>
+                    <li><a href="https://note.com/ruko7613/n/na215bab10457#f7f5e6b4-f41d-414c-8f55-139693a85b0c" target="_blank" rel="noopener">note - ヴヴヴ２完全バイブル (ruko)</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 PachislotSettingChecker</p>
+        </footer>
+    </div>
+
+    <!-- 画像モーダル -->
+    <div class="image-modal" id="imageModal">
+        <span class="modal-close" id="modalClose">×</span>
+        <img src="" alt="拡大画像" id="modalImage">
+        <p class="modal-hint">タップで閉じる</p>
+    </div>
+
+    <script src="../../js/auth-check.js"></script>
+    <script src="../../js/modal.js"></script>
+
+    <script>
+    (function() {
+        /* ==========================================
+           1. fc-branch の縦線を最後のアイテムの
+              横枝位置ぴったりで止める
+           ========================================== */
+        function fixBranchLines() {
+            document.querySelectorAll('.fc-branch').forEach(function(branch) {
+                var items = branch.querySelectorAll(':scope > .fc-item');
+                if (items.length === 0) return;
+
+                var lastItem = items[items.length - 1];
+                var branchRect = branch.getBoundingClientRect();
+                var lastRect  = lastItem.getBoundingClientRect();
+
+                var lineBottom = (lastRect.top - branchRect.top) + 22;
+                branch.style.setProperty('--fc-line-h', lineBottom + 'px');
+            });
+        }
+
+        var style = document.createElement('style');
+        style.textContent = '.fc-branch::before { height: var(--fc-line-h, 100%); }';
+        document.head.appendChild(style);
+
+        /* ==========================================
+           2. SVG接続線を描画
+              「▲上のもう1周続行と同じ」→「もう1周続行」
+           ========================================== */
+        var MARGIN = 14;
+
+        function drawConnections() {
+            var old = document.querySelector('.fc-loop-svg');
+            if (old) old.remove();
+
+            var fromNode = document.getElementById('fc-loop-target-direct');
+            var toNode   = document.getElementById('fc-loop-target');
+            var tree     = document.querySelector('.fc-tree');
+            if (!fromNode || !toNode || !tree) return;
+
+            var fromBox = fromNode.querySelector('.fc-box');
+            var toBox   = toNode.querySelector('.fc-box');
+            if (!fromBox || !toBox) return;
+
+            var treeRect = tree.getBoundingClientRect();
+            var fromRect = fromBox.getBoundingClientRect();
+            var toRect   = toBox.getBoundingClientRect();
+
+            // from: ボックスの右端中央
+            var fromRightX = fromRect.right - treeRect.left;
+            var fromMidY   = fromRect.top + fromRect.height / 2 - treeRect.top;
+
+            // to: ボックスの右端中央
+            var toRightX = toRect.right - treeRect.left;
+            var toMidY   = toRect.top + toRect.height / 2 - treeRect.top;
+
+            var bendX = Math.max(fromRightX, toRightX) + MARGIN;
+
+            var ns  = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('class', 'fc-loop-svg');
+            svg.style.width  = (bendX + 20) + 'px';
+            svg.style.height = tree.scrollHeight + 'px';
+
+            // 矢印マーカー定義
+            var defs = document.createElementNS(ns, 'defs');
+            var marker = document.createElementNS(ns, 'marker');
+            marker.setAttribute('id', 'arrowhead');
+            marker.setAttribute('markerWidth', '8');
+            marker.setAttribute('markerHeight', '6');
+            marker.setAttribute('refX', '8');
+            marker.setAttribute('refY', '3');
+            marker.setAttribute('orient', 'auto');
+            var arrow = document.createElementNS(ns, 'polygon');
+            arrow.setAttribute('points', '0 0, 8 3, 0 6');
+            arrow.setAttribute('fill', '#4ecdc4');
+            marker.appendChild(arrow);
+            defs.appendChild(marker);
+            svg.appendChild(defs);
+
+            var r = 6;
+
+            // from右端 → 右に出る → 上に曲がる → to右端に入る
+            var d = 'M ' + fromRightX + ' ' + fromMidY
+                  + ' L ' + (bendX - r) + ' ' + fromMidY
+                  + ' Q ' + bendX + ' ' + fromMidY + ' ' + bendX + ' ' + (fromMidY - r)
+                  + ' L ' + bendX + ' ' + (toMidY + r)
+                  + ' Q ' + bendX + ' ' + toMidY + ' ' + (bendX - r) + ' ' + toMidY
+                  + ' L ' + (toRightX) + ' ' + toMidY;
+
+            var path = document.createElementNS(ns, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', '#4ecdc4');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('stroke-dasharray', '6 3');
+            path.setAttribute('marker-end', 'url(#arrowhead)');
+            svg.appendChild(path);
+
+            tree.appendChild(svg);
+        }
+
+        /* ==========================================
+           3. 初期化 & リサイズ
+           ========================================== */
+        function refresh() {
+            fixBranchLines();
+            drawConnections();
+        }
+
+        window.addEventListener('load', refresh);
+        window.addEventListener('resize', refresh);
+    })();
+    </script>
+
+    <script>
+    /* トグル開閉 */
+    document.querySelectorAll('.toggle-header').forEach(function(header) {
+        header.addEventListener('click', function() {
+            var item = this.closest('.toggle-item');
+            item.classList.toggle('open');
+        });
+    });
+    </script>
+
+</body>
+</html>

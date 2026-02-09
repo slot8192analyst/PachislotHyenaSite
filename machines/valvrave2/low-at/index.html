@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>革命機ヴァルヴレイヴ2 優遇狙いチャート</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="machine-header">
+            <p class="back-link"><a href="../../../index.html">← 機種選択に戻る</a></p>
+            <div class="machine-header-image">
+                <img src="../../../images/valvrave2.jpg" alt="革命機ヴァルヴレイヴ2">
+            </div>
+            <h1 class="machine-header-title">革命機ヴァルヴレイヴ2</h1>
+        </header>
+
+        <main>
+            <section class="info-card">
+                <h2>優遇狙いチャート</h2>
+                <div class="info-content">
+                    <div class="fc-tree">
+
+                        <!-- root -->
+                        <div class="fc-node">
+                            <div class="fc-box fc-box--start">AT後9pt抜けの 100〜130G<br>2周期目100pt未達 から打ち始め</div>
+                        </div>
+
+                        <ul class="fc-branch">
+
+                            <!-- ルート1: 100移行せず 140pt以下 -->
+                            <li class="fc-item">
+                                <div class="fc-label">100移行せず・140pt以下</div>
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--stop">ヤメ</div>
+                                </div>
+                            </li>
+
+                            <!-- ルート2: 100移行せず 150pt以上 -->
+                            <li class="fc-item">
+                                <div class="fc-label">100移行せず・150pt以上</div>
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--go">200pt前兆まで見る</div>
+                                </div>
+                                <ul class="fc-branch">
+                                    <!-- 200pt抜けを先（上）に -->
+                                    <li class="fc-item">
+                                        <div class="fc-label">200pt抜け</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--stop">ヤメ</div>
+                                        </div>
+                                    </li>
+                                    <!-- CZ当選を後（下）に -->
+                                    <li class="fc-item">
+                                        <div class="fc-label">CZ当選</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--hit">CZ当選</div>
+                                        </div>
+                                        <ul class="fc-branch">
+                                            <!-- スルー -->
+                                            <li class="fc-item">
+                                                <div class="fc-label">スルー</div>
+                                                <div class="fc-node" id="fc-loop-target">
+                                                    <div class="fc-box fc-box--caution">もう1周続行</div>
+                                                </div>
+                                                <div class="fc-connector"></div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--default">200pt抜け</div>
+                                                </div>
+                                                <div class="fc-connector"></div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--stop">ヤメ</div>
+                                                </div>
+                                            </li>
+                                            <!-- 突破→ボーナス -->
+                                            <li class="fc-item">
+                                                <div class="fc-label">突破 → ボーナス後</div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--stop">即ヤメ</div>
+                                                </div>
+                                            </li>
+                                            <!-- 突破→AT -->
+                                            <li class="fc-item">
+                                                <div class="fc-label">突破 → AT後</div>
+                                                <div class="fc-node">
+                                                    <div class="fc-box fc-box--caution">引き戻し見て、示唆による押し引き
+                                                        <br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;"><strong>弱革命後のモニター示唆：</strong>Valvrave3(黄),PFネーム火遊(紫) → 2周期100ptの優遇移行チェックまで
+                                                        <br><strong>弱革命後のモニター示唆：</strong>火人(赤),搭乗者野火マリエ(赤) → 続行
+                                                        <br><strong>下位ATor強超革命後のモニター示唆：</strong>火人(赤),搭乗者野火マリエ(赤) → 続行
+                                                        <br><strong>電脳ゾーン後ボイス：</strong>「ナーイス」かつ弱超革命後 → 2周期100ptの優遇移行チェックまで
+                                                        <br><strong>電脳ゾーン後ボイス：</strong>「自分で自分がわからない」 → CZまで不問</span></div>
+                                                </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- ルート3: 直接100or200でCZ当選→スルー -->
+                            <li class="fc-item">
+                                <div class="fc-label">100 or 200でCZ当選 → スルー</div>
+                                <div class="fc-node" id="fc-loop-target-direct">
+                                    <div class="fc-box fc-box--action">▲ 上の「もう1周続行」と同じ</div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 解説コラム -->
+            <section class="toggle-section">
+                <h2 class="toggle-section-title">解説コラム</h2>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">ヴヴヴ2のATの特徴について</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>実際のヴヴヴ2のATは2種類に分類できて</p>
+                            <p>継続管理型のATと</p>
+                            <p>セット数管理型のAT(いわゆるデキレAT)が存在すると考えられる</p>
+                            <p>※これは特定レア役を引けば継続するタイプのATでない場合にこのような仕組みになっている</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">デキレATの仕様と優遇移行について</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>ヴヴヴ2のデキレATの継続セット数はおそらく<strong>内部pt</strong>で管理されている</p>
+                            <p>内部ptがMAXに到達したときにデキレATが終了し、そのあと優遇区間へ移行するのが基本的流れと考察される</p>
+                            <p>ヴヴヴ2 内部pt獲得契機について</p>
+                            <p><strong>ラッシュ1setにつき 1pt</strong></p>
+                            <p><strong>革命ボーナス(BB) 1回につき 1～4pt ( ほぼ2か3)</strong></p>
+                            <p>が加算されていく。</p>
+                            <p>まれに設定変更時から強区間滞在で9ptを超える場合もあるが、ほぼ9pt到達で転落する可能性が高い。</p>
+                            <p>※デキレAT中9pt到達時のハラキリチャレンジ中にレア役を引いて壁を突破すると自力AT突入</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">それぞれの履歴について</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p><strong>パターン① 朝イチ決戦ボーナスからのラッシュ</strong></p>
+                            <p>この場合、ラッシュ9連(9pt)到達で落ちている場合に拾える</p>
+                            <div class = "setting-image">
+                                <img src="pattern-1.webp" alt="パターン① 決ボからラッシュ時">
+                            </div>
+                            <p><strong>パターン② 朝イチ革命ボーナスからのラッシュ</strong></p>
+                            <p>革命ボーナスのpt獲得は1～4で変動する。超革命が6setで終わった場合は革命で3ptとったというように考える。</p>
+                            <p>革命ボーナスのpt獲得が大体2か3なので、超革命のset数は大体6か7setで終わることがおおい。</p>
+                            <div class = "setting-image">
+                                <img src="pattern-2.webp" alt="パターン② 革ボからラッシュ時">
+                            </div>
+                            <p><strong>パターン③ 複数回のラッシュで9pt到達時</strong></p>
+                            <p>こういう履歴が多い。</p>
+                            <p>朝イチは革命からのラッシュでおそらく3pt。</p>
+                            <p>2回目のラッシュは決ボから6連で9pt到達強制終了。</p>
+                            <p>→ このあとに優遇に入ってるかどうかを見たい</p>
+                            <div class = "setting-image">
+                                <img src="pattern-3.webp" alt="パターン③ ラッシュ複数回時">
+                            </div>
+                            <p><strong>打ちたくないパターン</strong></p>
+                            <p>内部6pt所持中の台を打ってしまうと、せっかく超革命入れても即落ちてしまうので基本的には打たないようにしたい。</p>
+                            <p>画像でいうところの⑦⑧⑨の部分</p>
+                            <div class = "setting-image">
+                                <img src="pattern-4.webp" alt="パターン② 革ボからラッシュ時">
+                            </div>
+                            <p>a</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="references">
+                <h3>参考文献</h3>
+                <ul>
+                    <li><a href="https://note.com/ruko7613/n/na215bab10457#f7f5e6b4-f41d-414c-8f55-139693a85b0c" target="_blank" rel="noopener">note - ヴヴヴ２完全バイブル (ruko)</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 PachislotSettingChecker</p>
+        </footer>
+    </div>
+
+    <!-- 画像モーダル -->
+    <div class="image-modal" id="imageModal">
+        <span class="modal-close" id="modalClose">×</span>
+        <img src="" alt="拡大画像" id="modalImage">
+        <p class="modal-hint">タップで閉じる</p>
+    </div>
+
+    <script src="../../js/auth-check.js"></script>
+    <script src="../../js/modal.js"></script>
+
+    <script>
+    (function() {
+        /* ==========================================
+           1. fc-branch の縦線を最後のアイテムの
+              横枝位置ぴったりで止める
+           ========================================== */
+        function fixBranchLines() {
+            document.querySelectorAll('.fc-branch').forEach(function(branch) {
+                var items = branch.querySelectorAll(':scope > .fc-item');
+                if (items.length === 0) return;
+
+                var lastItem = items[items.length - 1];
+                var branchRect = branch.getBoundingClientRect();
+                var lastRect  = lastItem.getBoundingClientRect();
+
+                var lineBottom = (lastRect.top - branchRect.top) + 22;
+                branch.style.setProperty('--fc-line-h', lineBottom + 'px');
+            });
+        }
+
+        var style = document.createElement('style');
+        style.textContent = '.fc-branch::before { height: var(--fc-line-h, 100%); }';
+        document.head.appendChild(style);
+
+        /* ==========================================
+           2. SVG接続線を描画
+              「▲上のもう1周続行と同じ」→「もう1周続行」
+           ========================================== */
+        var MARGIN = 14;
+
+        function drawConnections() {
+            var old = document.querySelector('.fc-loop-svg');
+            if (old) old.remove();
+
+            var fromNode = document.getElementById('fc-loop-target-direct');
+            var toNode   = document.getElementById('fc-loop-target');
+            var tree     = document.querySelector('.fc-tree');
+            if (!fromNode || !toNode || !tree) return;
+
+            var fromBox = fromNode.querySelector('.fc-box');
+            var toBox   = toNode.querySelector('.fc-box');
+            if (!fromBox || !toBox) return;
+
+            var treeRect = tree.getBoundingClientRect();
+            var fromRect = fromBox.getBoundingClientRect();
+            var toRect   = toBox.getBoundingClientRect();
+
+            // from: ボックスの右端中央
+            var fromRightX = fromRect.right - treeRect.left;
+            var fromMidY   = fromRect.top + fromRect.height / 2 - treeRect.top;
+
+            // to: ボックスの右端中央
+            var toRightX = toRect.right - treeRect.left;
+            var toMidY   = toRect.top + toRect.height / 2 - treeRect.top;
+
+            var bendX = Math.max(fromRightX, toRightX) + MARGIN;
+
+            var ns  = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('class', 'fc-loop-svg');
+            svg.style.width  = (bendX + 20) + 'px';
+            svg.style.height = tree.scrollHeight + 'px';
+
+            // 矢印マーカー定義
+            var defs = document.createElementNS(ns, 'defs');
+            var marker = document.createElementNS(ns, 'marker');
+            marker.setAttribute('id', 'arrowhead');
+            marker.setAttribute('markerWidth', '8');
+            marker.setAttribute('markerHeight', '6');
+            marker.setAttribute('refX', '8');
+            marker.setAttribute('refY', '3');
+            marker.setAttribute('orient', 'auto');
+            var arrow = document.createElementNS(ns, 'polygon');
+            arrow.setAttribute('points', '0 0, 8 3, 0 6');
+            arrow.setAttribute('fill', '#4ecdc4');
+            marker.appendChild(arrow);
+            defs.appendChild(marker);
+            svg.appendChild(defs);
+
+            var r = 6;
+
+            // from右端 → 右に出る → 上に曲がる → to右端に入る
+            var d = 'M ' + fromRightX + ' ' + fromMidY
+                  + ' L ' + (bendX - r) + ' ' + fromMidY
+                  + ' Q ' + bendX + ' ' + fromMidY + ' ' + bendX + ' ' + (fromMidY - r)
+                  + ' L ' + bendX + ' ' + (toMidY + r)
+                  + ' Q ' + bendX + ' ' + toMidY + ' ' + (bendX - r) + ' ' + toMidY
+                  + ' L ' + (toRightX) + ' ' + toMidY;
+
+            var path = document.createElementNS(ns, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', '#4ecdc4');
+            path.setAttribute('stroke-width', '2');
+            path.setAttribute('stroke-dasharray', '6 3');
+            path.setAttribute('marker-end', 'url(#arrowhead)');
+            svg.appendChild(path);
+
+            tree.appendChild(svg);
+        }
+
+        /* ==========================================
+           3. 初期化 & リサイズ
+           ========================================== */
+        function refresh() {
+            fixBranchLines();
+            drawConnections();
+        }
+
+        window.addEventListener('load', refresh);
+        window.addEventListener('resize', refresh);
+    })();
+    </script>
+
+    <script>
+    /* トグル開閉 */
+    document.querySelectorAll('.toggle-header').forEach(function(header) {
+        header.addEventListener('click', function() {
+            var item = this.closest('.toggle-item');
+            item.classList.toggle('open');
+        });
+    });
+    </script>
+
+</body>
+</html>
