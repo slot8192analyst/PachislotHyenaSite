@@ -3,23 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>かぐや様は告らせたい 設定判別 | パチスロ設定判別要素まとめ</title>
+    <title>攻殻機動隊 優遇×モードD狙いチャート</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="machine.css">
 </head>
 <body>
     <div class="container">
         <header class="machine-header">
             <p class="back-link"><a href="../../index.html">← 機種選択に戻る</a></p>
             <div class="machine-header-image">
-                <img src="../../images/kaguya.jpg" alt="かぐや様は告らせたい">
+                <img src="../../images/koukaku.jpg" alt="攻殻機動隊">
             </div>
-            <p class="subtitle">設定判別ポイント</p>
+            <h1 class="machine-header-title">L攻殻機動隊</h1>
         </header>
 
         <main>
             <section class="info-card">
-                <h2>準備中</h2>
+                <h2>優遇 × モードD狙いチャート</h2>
+                <div class="info-content">
+                    <div class="fc-tree">
+                    
+                        <!-- root -->
+                        <div class="fc-node">
+                            <div class="fc-box fc-box--start">前回AT 500枚以下の即ヤメ台を拾う<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">優遇状態の可能性が高い<br>0G〜不問で打てる（期待値100%）</span></div>
+                        </div>
+                    
+                        <!-- 補足 -->
+                        <div class="fc-supplement-item fc-supplement-item--info" style="margin: 8px 0;">
+                            <p>サミー機種のため<strong>1000枚以上獲得後は大幅冷遇</strong>、500枚以下は優遇状態</p>
+                            <p>優遇状態では<strong>モードDの選択率が上昇</strong>する</p>
+                        </div>
+                    
+                        <!-- STEP1 -->
+                        <div class="fc-connector"></div>
+                        <div class="fc-node">
+                            <div class="fc-box fc-box--action">50G前兆まで打つ<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">殲滅ゾーンの出現と示唆を確認</span></div>
+                        </div>
+                    
+                        <ul class="fc-branch">
+                        
+                            <!-- 殲滅ゾーンなし＆示唆なし -->
+                            <li class="fc-item">
+                                <div class="fc-label">殲滅ゾーンなし × 示唆なし</div>
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--stop">ヤメ</div>
+                                </div>
+                            </li>
+                        
+                            <!-- 殲滅ゾーン出現 -->
+                            <li class="fc-item">
+                                <div class="fc-label">殲滅ゾーン出現</div>
+                                <div class="fc-node">
+                                    <div class="fc-box fc-box--hit">150Gゾーンまで続行<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">モードDならCZ当選に期待<br>ゾーン・示唆込みで期待値105%見込み</span></div>
+                                </div>
+                            
+                                <ul class="fc-branch">
+                                    <li class="fc-item">
+                                        <div class="fc-label">CZ当選</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--hit">気合で通す</div>
+                                        </div>
+                                    </li>
+                                    <li class="fc-item">
+                                        <div class="fc-label">CZなし × 示唆なし</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--stop">ヤメ</div>
+                                        </div>
+                                    </li>
+                                    <li class="fc-item">
+                                        <div class="fc-label">CZなし × 続行示唆あり</div>
+                                        <div class="fc-node">
+                                            <div class="fc-box fc-box--go">C以上示唆がでていれば続行判断</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                    
+                        <!-- やめ時注意 -->
+                        <div class="fc-supplement" style="margin-top: 16px;">
+                            <div class="fc-supplement-title">やめ時の注意</div>
+                            <div class="fc-supplement-item fc-supplement-item--warn">
+                                <p><strong>ポイントMAXと規定到達が被ると即前兆にストックされる</strong>ため、ヤメ時に注意すること。前兆中・ストック確認前にヤメないように。</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </section>
+
+            <!-- 解説コラム -->
+            <section class="toggle-section">
+                <h2 class="toggle-section-title">解説コラム</h2>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">サミー機種の優遇・冷遇について</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>サミー機種では前回ATの獲得枚数によって内部状態が変化すると考えられています。</p>
+                            <p><span class="accent">500枚以下</span>で終了した場合は優遇状態に移行しやすく、モードDの選択率が上がります。</p>
+                            <p>逆に<span class="danger">1000枚以上</span>獲得した後は大幅に冷遇されるため、拾う際は前回の獲得枚数を必ず確認しましょう。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">ポイントMAXストックに注意</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>L攻殻機動隊では<strong>ポイントからの殲滅ゾーン抽選</strong>と<strong>ゲーム数からの殲滅ゾーン抽選</strong>が2軸で行われている。</p>
+                        
+                            <p>その中で特殊な仕様として、<span class="danger">ポイントからの本前兆と規定ゲーム数からの本前兆が被った場合、1つ殲滅ゾーンがストックされる</span>というものがある。</p>
+                        
+                            <p><strong>【具体例】通常Dで30Gに殲滅ポイントMAXになった場合</strong></p>
+                        
+                            <p>30G：殲滅ポイントMAX（前兆開始 約15G）<br>
+                            ↓<br>
+                            45G：殲滅ゾーン突入（殲滅ゾーンは約8G）<br>
+                            ↓<br>
+                            53G：殲滅ゾーン終了<br>
+                            ↓<br>
+                            殲滅ゾーン後の前兆開始（即前兆 or 4G前兆 or 20G前兆）→ CZ告知</p>
+                            
+                            <p>モードDなので<strong>50Gでも殲滅ゾーンに受かっていたはず</strong>だが、殲滅ポイントからの一連の前兆の間に50Gを踏んでいるため、この分はストックに回る。</p>
+                            
+                            <p><strong>【ストックされた殲滅ゾーンの行方】</strong></p>
+                            
+                            <p>本来50Gで出てくるはずだった殲滅ゾーンは、<span class="accent">CZ終了後 or AT終了後の「即前兆」</span>として出てくる。</p>
+                            
+                            <p>即前兆の場合はモンキーの朝一のように<strong>2G目から煽りが開始</strong>する。これを知らずに即ヤメすると取りこぼしになる。逆に、他人が捨てた即前兆台を拾える可能性もある。</p>
+                            
+                            <p><span class="accent">✅ 自分が打っているときに「殲滅ポイントMAX × 規定G数」が同時に受かっていそうな場合は即ヤメ厳禁。不安な場合は毎回3Gほど回してからヤメればOK。</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">続行するべき隠しウィンドウについて</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>通常時を77G以上回した状態で左停止ボタンを7回押すと右モニターに示唆が出現する。</p>
+                            <p>フォローするのは赤枠、紫枠、金枠の3種類・・・いずれもモードC以上示唆</p>
+                            <p>公安9課(赤枠)：通常C以上濃厚</p>
+                            <p>電脳素子(紫枠)：通常C以上濃厚(通常Dに期待)</p>
+                            <p>アオイ(金枠)：通常D以上濃厚+設定4以上濃厚</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">続行するべきアイキャッチについて</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>ステージチェンジ時などに発生するアイキャッチにも示唆情報が含まれている。</p>
+                            <p>フォローするのは画面が全体的に紫色の殲滅3回以上のもの</p>
+                            <p>3人+タチコマ：殲滅ゾーン3回以上 or 通常D</p>
+                            <p>2ndGIG(いっぱい映ってるやつ)：殲滅ゾーン5回以上 or 通常D期待度75%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">続行するべきタチコマがもっている看板について</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>CZ前兆や、CZ・AT終了時にタチコマがもっている看板は累計殲滅ptの示唆が含まれている。</p>
+                            <p>フォローするのは赤い看板の100pt以上濃厚のもの</p>
+                            <p>泰然自若(白)：平均35pt所持</p>
+                            <p>日進月歩(青)：平均50pt所持</p>
+                            <p>虎視眈々(緑)：平均85pt所持</p>
+                            <p>寸歩不離(赤)：平均130pt所持</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-item">
+                    <div class="toggle-header">
+                        <span class="toggle-header-text">続行するべきリプレイ時特殊フラッシュについて</span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="toggle-body">
+                        <div class="toggle-body-inner">
+                            <p>リプレイ成立時に特殊なリールフラッシュが発生すればモードの示唆になる。</p>
+                            <p>CZ・AT終了後50G目までのリプレイ時発生する可能性があり、C以上演出を見たらフォロー</p>
+                            <p>ふわっと明滅：デフォルト演出</p>
+                            <p>左 → 右：通常B以上期待度UP</p>
+                            <p>左 → 右 → 左：通常C以上濃厚</p>
+                            <p>左 → 右 → 左 + ふわっと明滅：通常C以上濃厚(通常Dに期待)</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="references">
+                <h3>参考文献</h3>
+                <ul>
+                    <li><a href="https://note.com/ruko7613/n/n1b6fdee4cd68" target="_blank" rel="noopener">note - 【優遇狙い】新台「L攻殻機動隊」のここを打て (ruko)</a></li>
+                </ul>
             </section>
         </main>
 
@@ -37,5 +235,32 @@
 
     <script src="../../js/auth-check.js"></script>
     <script src="../../js/modal.js"></script>
+    <script src="../../js/toggle.js"></script>
+
+    <script>
+    (function() {
+        function fixBranchLines() {
+            document.querySelectorAll('.fc-branch').forEach(function(branch) {
+                var items = branch.querySelectorAll(':scope > .fc-item');
+                if (items.length === 0) return;
+
+                var lastItem = items[items.length - 1];
+                var branchRect = branch.getBoundingClientRect();
+                var lastRect  = lastItem.getBoundingClientRect();
+
+                var lineBottom = (lastRect.top - branchRect.top) + 22;
+                branch.style.setProperty('--fc-line-h', lineBottom + 'px');
+            });
+        }
+
+        var style = document.createElement('style');
+        style.textContent = '.fc-branch::before { height: var(--fc-line-h, 100%); }';
+        document.head.appendChild(style);
+
+        window.addEventListener('load', fixBranchLines);
+        window.addEventListener('resize', fixBranchLines);
+    })();
+    </script>
+
 </body>
 </html>
